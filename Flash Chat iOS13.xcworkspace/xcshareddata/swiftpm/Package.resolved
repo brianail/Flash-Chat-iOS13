@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/firebase-ios-sdk",
       "state" : {
-        "revision" : "ccb2bccb82e62ad9e8a4e757a43ce6a04ceae1c9",
-        "version" : "8.14.0"
+        "revision" : "839cc6b0cd80b0b8bf81fe9bd82b743b25dc6446",
+        "version" : "8.9.1"
       }
     },
     {
@@ -32,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/GoogleAppMeasurement.git",
       "state" : {
-        "revision" : "9b74e6a3f875208c04c22b39b580a21d4de0f4f9",
-        "version" : "8.14.0"
+        "revision" : "9b2f6aca5b4685c45f9f5481f19bee8e7982c538",
+        "version" : "8.9.1"
       }
     },
     {
