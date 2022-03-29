@@ -109,8 +109,8 @@ extension ChatViewController: UITableViewDataSource {
             cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.lightPurple)
             cell.label.textColor = UIColor(named: K.BrandColors.purple)
         } else {
-            cell.rightImageView.isHidden = true
             cell.leftImageView.isHidden = false
+            cell.rightImageView.isHidden = true
             cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.purple)
             cell.label.textColor = UIColor(named: K.BrandColors.lightPurple)
         }
