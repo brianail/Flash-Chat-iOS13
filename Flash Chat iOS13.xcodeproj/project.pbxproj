@@ -10,7 +10,6 @@
 		0B628177235DEE8100E35CAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B628176235DEE8100E35CAF /* AppDelegate.swift */; };
 		0B628179235DEE8100E35CAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B628178235DEE8100E35CAF /* SceneDelegate.swift */; };
 		0B62817E235DEE8100E35CAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B62817C235DEE8100E35CAF /* Main.storyboard */; };
-		0B628180235DEE8400E35CAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B62817F235DEE8400E35CAF /* Assets.xcassets */; };
 		0B628183235DEE8400E35CAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B628181235DEE8400E35CAF /* LaunchScreen.storyboard */; };
 		0B62818B235DF00000E35CAF /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62818A235DF00000E35CAF /* WelcomeViewController.swift */; };
 		0B62818D235DF00B00E35CAF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62818C235DF00B00E35CAF /* RegisterViewController.swift */; };
@@ -22,6 +21,7 @@
 		89324D8027F1852B004C1426 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 89324D7F27F1852B004C1426 /* FirebaseFirestore */; };
 		8969A89327EFD32200E6512C /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8969A89127EFD32200E6512C /* MessageCell.swift */; };
 		8969A89427EFD32200E6512C /* ReusableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8969A89227EFD32200E6512C /* ReusableCell.xib */; };
+		89B2C75E27F56F21001C6DD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89B2C75D27F56F21001C6DD1 /* Assets.xcassets */; };
 		89E7BDEB27F0DF270014CE5E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E7BDEA27F0DF270014CE5E /* Message.swift */; };
 		89F4372727EF921300E75E12 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89F4372627EF921300E75E12 /* GoogleService-Info.plist */; };
 		89F4372A27EF950000E75E12 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 89F4372927EF950000E75E12 /* FirebaseAuth */; };
@@ -34,7 +34,6 @@
 		0B628176235DEE8100E35CAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B628178235DEE8100E35CAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0B62817D235DEE8100E35CAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0B62817F235DEE8400E35CAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B628182235DEE8400E35CAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B628184235DEE8400E35CAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B62818A235DF00000E35CAF /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +45,7 @@
 		849CD3BB6C778B0437E5A222 /* Pods_Flash_Chat_iOS13.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flash_Chat_iOS13.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8969A89127EFD32200E6512C /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		8969A89227EFD32200E6512C /* ReusableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReusableCell.xib; sourceTree = "<group>"; };
+		89B2C75D27F56F21001C6DD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89E7BDEA27F0DF270014CE5E /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		89F4372627EF921300E75E12 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		89F4372D27EFB39700E75E12 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -96,10 +96,10 @@
 				0B628193235DF03400E35CAF /* Views */,
 				0B628192235DF02000E35CAF /* Controllers */,
 				89F4372D27EFB39700E75E12 /* Constants.swift */,
-				0B62817F235DEE8400E35CAF /* Assets.xcassets */,
 				0B628181235DEE8400E35CAF /* LaunchScreen.storyboard */,
 				0B628184235DEE8400E35CAF /* Info.plist */,
 				89F4372627EF921300E75E12 /* GoogleService-Info.plist */,
+				89B2C75D27F56F21001C6DD1 /* Assets.xcassets */,
 			);
 			path = "Flash Chat iOS13";
 			sourceTree = "<group>";
@@ -222,9 +222,9 @@
 			files = (
 				0B628183235DEE8400E35CAF /* LaunchScreen.storyboard in Resources */,
 				8969A89427EFD32200E6512C /* ReusableCell.xib in Resources */,
-				0B628180235DEE8400E35CAF /* Assets.xcassets in Resources */,
 				89F4372727EF921300E75E12 /* GoogleService-Info.plist in Resources */,
 				0B62819E235F0F4D00E35CAF /* README.md in Resources */,
+				89B2C75E27F56F21001C6DD1 /* Assets.xcassets in Resources */,
 				0B62817E235DEE8100E35CAF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,7 +432,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 36870EFC0B909F7C15CB7D2D /* Pods-Flash Chat iOS13.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R9YGK79Y8Y;
 				INFOPLIST_FILE = "Flash Chat iOS13/Info.plist";
@@ -451,7 +450,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F975F6FBDD3E39A1AF84C6B7 /* Pods-Flash Chat iOS13.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R9YGK79Y8Y;
 				INFOPLIST_FILE = "Flash Chat iOS13/Info.plist";

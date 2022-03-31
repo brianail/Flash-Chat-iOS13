@@ -10,13 +10,13 @@ import UIKit
 import Firebase
 
 class ChatViewController: UIViewController {
-    
-    let db = Firestore.firestore()
-    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextfield: UITextField!
     
+    let db = Firestore.firestore()
+    var messageCell = MessageCell()
     var messages: [Message] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +25,7 @@ class ChatViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.register(UINib(nibName: K.cellIdentifier, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
+        
         loadMessages()
         
     }
@@ -32,11 +33,11 @@ class ChatViewController: UIViewController {
     func loadMessages() {
         db.collection(K.FStore.collectionName)
             .order(by: K.FStore.dateField)
-            .addSnapshotListener { querySnapshot, Error in
+            .addSnapshotListener { (querySnapshot, error) in
                 
                 self.messages = []
                 
-                if let e = Error {
+                if let e = error {
                     print("There was in issue retrieving data from firestore. \(e)")
                 } else {
                     if let snapshotDocument = querySnapshot?.documents {
@@ -74,8 +75,8 @@ class ChatViewController: UIViewController {
                         }
                     }
                 }
-            }
         }
+    }
     
     
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
@@ -99,26 +100,28 @@ extension ChatViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let message = messages[indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath)
-        as! MessageCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
         cell.label.text = message.body
         
+        //This is a message from the current user.
         if message.sender == Auth.auth().currentUser?.email {
             cell.leftImageView.isHidden = true
             cell.rightImageView.isHidden = false
-            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.lightPurple)
-            cell.label.textColor = UIColor(named: K.BrandColors.purple)
-        } else {
-            cell.rightImageView.isHidden = true
-            cell.leftImageView.isHidden = false
-            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.purple)
-            cell.label.textColor = UIColor(named: K.BrandColors.lightPurple)
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.bubbleSend)
+            cell.label.textColor = UIColor(named: K.BrandColors.fontColor)
         }
+        //This is a message from another sender.
+        else {
+            cell.leftImageView.isHidden = false
+            cell.rightImageView.isHidden = true
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.bubbleReceived)
+            cell.label.textColor = UIColor(named: K.BrandColors.fontColor)
+        }
+        
         
         
         return cell
     }
 }
-
 
 

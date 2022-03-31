@@ -14,6 +14,12 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        emailTextfield.layer.cornerRadius = emailTextfield.frame.size.height / 10
+        passwordTextfield.layer.cornerRadius = passwordTextfield.frame.size.height / 10
+    }
+    
     
     @IBAction func loginPressed(_ sender: UIButton) {
         if let email = emailTextfield.text, let password = passwordTextfield.text {

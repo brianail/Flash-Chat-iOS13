@@ -16,10 +16,12 @@ struct K {
     static let loginSegue = "LoginToChat"
     
     struct BrandColors {
-        static let purple = "BrandPurple"
-        static let lightPurple = "BrandLightPurple"
-        static let blue = "BrandBlue"
-        static let lighBlue = "BrandLightBlue"
+        static let coralColor = "coralColor"
+        static let peachColor = "peachColor"
+        static let fontColor = "fontColor"
+        static let bubbleReceived = "bubbleReceived"
+        static let bubbleSend = "bubbleSend"
+        static let backgroundColor = "backgroundColor"
     }
     
     struct FStore {
