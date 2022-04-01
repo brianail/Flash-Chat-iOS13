@@ -57,7 +57,7 @@ class ChatViewController: UIViewController {
                     }
                 }
             }
-    }
+        }
     
     
     @IBAction func sendPressed(_ sender: UIButton) {
@@ -75,8 +75,8 @@ class ChatViewController: UIViewController {
                         }
                     }
                 }
+            }
         }
-    }
     
     
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
@@ -103,24 +103,19 @@ extension ChatViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
         cell.label.text = message.body
         
-        
         if message.sender == Auth.auth().currentUser?.email {
-            cell.leftImageView.isHidden = true
-            cell.rightImageView.isHidden = false
+            cell.leftImageView.isHidden = false
+            cell.rightImageView.isHidden = true
             cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.bubbleSend)
             cell.label.textColor = UIColor(named: K.BrandColors.fontColor)
         }
-
+        
         else {
-            cell.leftImageView.isHidden = false
-            cell.rightImageView.isHidden = true
+            cell.leftImageView.isHidden = true
+            cell.rightImageView.isHidden = false
             cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.bubbleReceived)
             cell.label.textColor = UIColor(named: K.BrandColors.fontColor)
-            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.lightPurple)
-            cell.label.textColor = UIColor(named: K.BrandColors.purple)
-        } 
-        
-        
+        }
         
         return cell
     }

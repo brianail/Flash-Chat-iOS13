@@ -976,6 +976,7 @@ Codeless drop-in universal library allows to prevent issues of keyboard sliding 
             }
 
             let navigationBarAreaHeight : CGFloat = UIApplication.shared.statusBarFrame.height + ( rootController.navigationController?.navigationBar.frame.height ?? 0)
+            
             let layoutAreaHeight : CGFloat = rootController.view.layoutMargins.bottom
 
             let topLayoutGuide : CGFloat = max(navigationBarAreaHeight, layoutAreaHeight) + 5
